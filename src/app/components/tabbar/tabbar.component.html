@@ -1,0 +1,16 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>QC</a>
+    <ng-template ngbNavContent>
+      <app-qccontroller></app-qccontroller>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>SC</a>
+    <ng-template ngbNavContent>
+      <app-sccontrol></app-sccontrol>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

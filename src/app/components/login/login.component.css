@@ -1,0 +1,16 @@
+.hijo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-fluid {
+  margin-bottom: 16px;
+  width: fit-content;
+  align-self: center;
+}
+.titulo-login {
+  margin-top: 16px;
+}

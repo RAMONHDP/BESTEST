@@ -1,0 +1,53 @@
+<div class="hijo">
+  <img
+    src="http://www.best.com.es/wp-content/uploads/2017/05/Logo-Hutchison_Port_Best.png"
+    class="img-fluid"
+    alt="..."
+  />
+  <div class="card text-left" style="width: 18rem;">
+    <h3 class="titulo-login">Oficina terminal</h3>
+    <div class="card-body">
+      <form [formGroup]="formLogin" (submit)="send()">
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="name@example.com"
+            name="email"
+            formControlName="email"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            name="password"
+            formControlName="password"
+          />
+          <label for="password">Contraseña</label>
+        </div>
+        <hr />
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="formLogin.invalid && !showProgress"
+          >
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+              *ngIf="showProgress"
+            ></span>
+            <span *ngIf="!showProgress">Iniciar sesión</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="showAlert">
+    Email o contraseña incorrecta
+  </div>
+</div>
